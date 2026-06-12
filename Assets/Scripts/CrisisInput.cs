@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CrisisInput : MonoBehaviour
 {
@@ -19,7 +18,7 @@ public class CrisisInput : MonoBehaviour
         if (hit.collider != null && hit.collider.gameObject.TryGetComponent(out IDestructible destructible))
         {
             Debug.Log("Destructible found");
-            destructible.Disable();
+            CrisisVisualizer.Instance.AddDestructibleForNextTic(destructible);
         }
     }
 }

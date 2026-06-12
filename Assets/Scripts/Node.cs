@@ -31,14 +31,15 @@ public class Node : MonoBehaviour, IDestructible
         var type = connectionLine.Type;
         if (InConnections.All(connection => connection.Type != type || !connection.Active))
         {
-            Disable();
+            CrisisVisualizer.Instance.AddDestructibleForNextTic(this);
         }
     }
 
     public void Disable()
     {
         Active = false;
-        OutConnections.ForEach(connection => connection.Disable());
+        Debug.Log("Connection disabled");
+        OutConnections.ForEach(connection => CrisisVisualizer.Instance.AddDestructibleForNextTic(connection));
         onDisabled?.Invoke();
     }
 }

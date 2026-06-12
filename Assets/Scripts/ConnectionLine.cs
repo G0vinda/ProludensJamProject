@@ -37,6 +37,7 @@ public class ConnectionLine : MonoBehaviour, IDestructible
     public void Disable()
     {
         Active = false;
+        Debug.Log("Connection disabled");
         To.OnInConnectionDisabled(this);
         onDisabled?.Invoke();
     }
