@@ -8,9 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1583500830595522714, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
+      propertyPath: <Type>k__BackingField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231860357084397432, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.71671444
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231860357084397432, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.010546438
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231860357084397432, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.745283
+      objectReference: {fileID: 0}
     - target: {fileID: 7476686346614150232, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
       propertyPath: m_Name
-      value: Node
+      value: CommunicationNode
       objectReference: {fileID: 0}
     - target: {fileID: 8359713624385434732, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
       propertyPath: m_LocalPosition.x

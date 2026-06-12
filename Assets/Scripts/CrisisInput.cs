@@ -2,7 +2,6 @@
 
 public class CrisisInput : MonoBehaviour
 {
-    [SerializeField] private ContactFilter2D destructionContactFilter;
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

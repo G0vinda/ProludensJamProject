@@ -1,10 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class ConnectionLine : MonoBehaviour, IDestructible
 {
     [SerializeField] private UnityEvent onDisabled;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Color electricityColor;
+    [SerializeField] private Color waterColor;
+    [SerializeField] private Color communicationColor;
+    [SerializeField] private Color heatColor;
     
     public bool Active { get; set; } = true;
     public ResourceType Type { get; private set; }
@@ -18,6 +23,24 @@ public class ConnectionLine : MonoBehaviour, IDestructible
         To = to;
         transform.position = Vector3.Lerp(from.transform.position, to.transform.position, 0.5f);
         to.InConnections.Add(this);
+
+        switch (from.Type)
+        {
+            case ResourceType.Electricity:
+                spriteRenderer.color = electricityColor;
+                break;
+            case ResourceType.Water:
+                spriteRenderer.color = waterColor;
+                break;
+            case ResourceType.Heat:
+                spriteRenderer.color = heatColor;
+                break;
+            case ResourceType.Communication:
+                spriteRenderer.color = communicationColor;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
         
         var distance = Vector3.Distance(from.transform.position, to.transform.position);
 
