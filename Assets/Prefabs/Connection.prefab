@@ -121,10 +121,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   spriteRenderer: {fileID: 6334648076411478467}
-  electricityColor: {r: 1, g: 0.91703665, b: 0.4575472, a: 1}
-  waterColor: {r: 0.2783019, g: 0.6518866, b: 1, a: 1}
-  communicationColor: {r: 0.8396226, g: 0.43169275, b: 0.8243525, a: 1}
-  heatColor: {r: 0.990566, g: 0.49722528, b: 0.39716092, a: 1}
+  electricityColor: {r: 1, g: 0.7921569, b: 0.03529412, a: 1}
+  waterColor: {r: 0, g: 0.30588236, b: 1, a: 1}
+  communicationColor: {r: 0.015686275, g: 0.5411765, b: 0, a: 1}
+  heatColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &5313024534599041055
 MonoBehaviour:
   m_ObjectHideFlags: 0
