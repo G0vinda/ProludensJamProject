@@ -34,11 +34,11 @@ RectTransform:
   - {fileID: 1365220193201663660}
   m_Father: {fileID: 6622532466990981010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 600, y: -500}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -150, y: 150}
   m_SizeDelta: {x: 300, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &9215805491947038664
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1495920767630054481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5261866837206598757}
+        m_TargetAssemblyTypeName: DefaultNamespace.LevelLoader, Assembly-CSharp
+        m_MethodName: LoadNextLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2607817009780229001
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,11 +166,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6622532466990981010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 597, y: 450}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -150, y: -150}
   m_SizeDelta: {x: 250, y: 150}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &6808446375261832682
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -515,6 +527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8206831808338968635}
+  - component: {fileID: 5261866837206598757}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -537,6 +550,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3841862825524977542}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5261866837206598757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8624076721063169556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63e6a6bcc3a64096bc1ce5a0005daa75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.LevelLoader
+  currentLevel: 0
 --- !u!1 &8963219267047417044
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +811,10 @@ PrefabInstance:
       propertyPath: levelSuccessText
       value: 
       objectReference: {fileID: 8952443020419489227}
+    - target: {fileID: 83165227838581992, guid: 66efd3433af637648b985c5215ac5822, type: 3}
+      propertyPath: scoreNeededForLevel
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6777147154479923480, guid: 66efd3433af637648b985c5215ac5822, type: 3}
       propertyPath: m_Name
       value: ScoreListener
