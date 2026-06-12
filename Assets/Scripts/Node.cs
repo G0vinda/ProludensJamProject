@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Node : MonoBehaviour
+public class Node : MonoBehaviour, IDestructible
 {
     [SerializeField] private ConnectionLine connectionLinePrefab;
     [field: SerializeField] public ResourceType Type { get; private set; }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class ConnectionLine : MonoBehaviour
+public class ConnectionLine : MonoBehaviour, IDestructible
 {
     [SerializeField] private UnityEvent onDisabled;
     [SerializeField] private SpriteRenderer spriteRenderer;

@@ -16,9 +16,10 @@ public class CrisisInput : MonoBehaviour
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
 
-        if (hit.collider != null)
+        if (hit.collider != null && hit.collider.gameObject.TryGetComponent(out IDestructible destructible))
         {
-            Debug.Log("object hit");
+            Debug.Log("Destructible found");
+            destructible.Disable();
         }
     }
 }
