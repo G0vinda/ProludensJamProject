@@ -56,6 +56,10 @@ MonoBehaviour:
   onDisabled:
     m_PersistentCalls:
       m_Calls: []
+  electricityVfx: {fileID: 2884944954873174583, guid: 8101f8f08438d8d48b44a3178e6f5898, type: 3}
+  communitcationVfx: {fileID: 4975921709027803997, guid: ac55c7fbc1597f049b7a3a6e201bf9dd, type: 3}
+  heatVfx: {fileID: 2200747681312113189, guid: ccb3bd22d718889458c4a21e02b5f54d, type: 3}
+  waterVfx: {fileID: 1052858621598201120, guid: 4ec58be2da3ced94394ee79adb94cd2a, type: 3}
 --- !u!1 &1160288511675560193
 GameObject:
   m_ObjectHideFlags: 0

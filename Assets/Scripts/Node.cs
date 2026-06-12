@@ -39,7 +39,11 @@ public class Node : MonoBehaviour, IDestructible
     {
         Active = false;
         Debug.Log("Connection disabled");
-        OutConnections.ForEach(connection => CrisisVisualizer.Instance.AddDestructibleForNextTic(connection));
+        OutConnections.ForEach(connection =>
+        {
+            if (connection.Active)
+                CrisisVisualizer.Instance.AddDestructibleForNextTic(connection);
+        });
         onDisabled?.Invoke();
     }
 }
