@@ -1,0 +1,24 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+public class CrisisInput : MonoBehaviour
+{
+    [SerializeField] private ContactFilter2D destructionContactFilter;
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+            OnClicked();
+    }
+
+    private void OnClicked()
+    {
+        Debug.Log("OnClicked");
+        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
+
+        if (hit.collider != null)
+        {
+            Debug.Log("object hit");
+        }
+    }
+}
