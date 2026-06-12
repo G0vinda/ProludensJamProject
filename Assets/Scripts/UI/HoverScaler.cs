@@ -6,8 +6,8 @@ namespace DefaultNamespace
     public class HoverScaler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private Vector3 startingScale;
-        [SerializeField] private Vector3 upsizedScale;
-        [SerializeField] private float connectorScaleMultiplier;
+        [SerializeField] private Vector3 upsizedScale = new Vector3(1.2f, 1.2f, 1.2f);
+        [SerializeField] private float connectorScaleMultiplier = 1.2f;
 
         private void Awake()
         {
@@ -21,7 +21,9 @@ namespace DefaultNamespace
 
             foreach (var connection in connections)
             {
-                connection.transform.localScale *= connectorScaleMultiplier;
+                var localScale = connection.transform.localScale;
+                localScale.y *= connectorScaleMultiplier;
+                connection.transform.localScale = localScale;
             }
         }
         
@@ -33,7 +35,9 @@ namespace DefaultNamespace
 
             foreach (var connection in connections)
             {
-                connection.transform.localScale /= connectorScaleMultiplier;
+                var localScale = connection.transform.localScale;
+                localScale.y /= connectorScaleMultiplier;
+                connection.transform.localScale = localScale;
             }
         }
     }

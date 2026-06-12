@@ -8,9 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2231860357084397432, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b6330886cb8e254e87089f0100e6480, type: 3}
+    - target: {fileID: 2231860357084397432, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231860357084397432, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231860357084397432, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7476686346614150232, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
       propertyPath: m_Name
-      value: Node
+      value: ElectricityNode
       objectReference: {fileID: 0}
     - target: {fileID: 8359713624385434732, guid: 0ba649d1f678f8c42aed47d25497709d, type: 3}
       propertyPath: m_LocalPosition.x
