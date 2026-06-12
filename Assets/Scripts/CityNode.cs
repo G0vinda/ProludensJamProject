@@ -12,16 +12,16 @@ public class CityNode : Node
             switch (type)
             {
                 case ResourceType.Electricity:
-                    Debug.Log("10 Points");
+                    Score.Increase(10);
                     break;
                 case ResourceType.Water:
-                    Debug.Log("20 Points");
+                    Score.Increase(20);
                     break;
                 case ResourceType.Heat:
-                    Debug.Log("20 Points");
+                    Score.Increase(20);
                     break;
                 case ResourceType.Communication:
-                    Debug.Log("50 Points");
+                    Score.Increase(50);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
