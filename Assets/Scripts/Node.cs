@@ -26,7 +26,7 @@ public class Node : MonoBehaviour, IDestructible
         }
     }
 
-    public void OnInConnectionDisabled(ConnectionLine connectionLine)
+    public virtual void OnInConnectionDisabled(ConnectionLine connectionLine)
     {
         var type = connectionLine.Type;
         if (InConnections.All(connection => connection.Type != type || !connection.Active))
