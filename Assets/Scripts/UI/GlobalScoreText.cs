@@ -20,9 +20,9 @@ public class GlobalScoreText : MonoBehaviour
     [ContextMenu("Set Counter Test")]
     public void SetCounterTest()
     {
-        SetCounter(19);
+        SetScoreText(19);
     }
-    public void SetCounter(int points)
+    public void SetScoreText(int points)
     {
         counterText.text = points.ToString();
         
