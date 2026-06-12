@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994bd3fb22224af7b090710fb1206b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CrisisInput
+  stormPrefab: {fileID: 8049829224176270880, guid: 362e97da3a7e90040a2e36934316644c, type: 3}
+  stormRadius: 0.89

@@ -20,18 +20,16 @@ public class CrisisVisualizer : MonoBehaviour
         _wait = new WaitForSeconds(0.6f);
     }
 
+    public void StartDestruction(IDestructible[] destructibles)
+    {
+        _isRunning = true;
+        _currentDestructibles = destructibles.ToList();
+        _crisisRoutine = StartCoroutine(CrisisRoutine());
+    }
+
     public void AddDestructibleForNextTic(IDestructible destructible)
     {
-        if (!_isRunning)
-        {
-            _isRunning = true;
-            _currentDestructibles.Add(destructible);
-            _crisisRoutine = StartCoroutine(CrisisRoutine());
-        }
-        else
-        {
-            _nextDestructibles.Add(destructible);
-        }
+        _nextDestructibles.Add(destructible);
     }
 
     private IEnumerator CrisisRoutine()

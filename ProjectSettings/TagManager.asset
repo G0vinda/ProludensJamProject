@@ -47,5 +47,8 @@ TagManager:
   - name: Nodes
     uniqueID: 2422225001
     locked: 0
+  - name: Storm
+    uniqueID: 2316153329
+    locked: 0
   m_RenderingLayers:
   - Default
